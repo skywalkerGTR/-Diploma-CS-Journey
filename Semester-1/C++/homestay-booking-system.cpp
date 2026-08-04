@@ -4,16 +4,12 @@ using namespace std;
 
 const int TOTAL_ROOMS = 5;
 
-// Room booking name list
 string roomName[TOTAL_ROOMS];
 
-// Room price list (per night)
 int roomPrice[TOTAL_ROOMS] = {120, 150, 180, 200, 250};
 
-// Nights booked for each room
 int nightsBooked[TOTAL_ROOMS] = {0, 0, 0, 0, 0};
 
-// -------------------- SHOW MENU --------------------
 void showMenu() {
     cout << "=====================================================" << endl;
     cout << "              HOMESTAY BOOKING SYSTEM  \n";
@@ -26,7 +22,6 @@ void showMenu() {
     cout << "Enter your choice:" << endl;
 }
 
-// -------------------- VIEW AVAILABLE ROOMS --------------------
 void viewAvailableRooms() {
     cout << "\nAvailable Rooms (with Price per Night):\n";
     for (int i = 0; i < TOTAL_ROOMS; i++) {
@@ -38,7 +33,6 @@ void viewAvailableRooms() {
     }
 }
 
-// -------------------- BOOK A ROOM --------------------
 void bookRoom() {
     int roomNumber;
     string name;
@@ -76,7 +70,6 @@ void bookRoom() {
     cout << "=====================================================" << endl;
 }
 
-// -------------------- CANCEL A BOOKING --------------------
 void cancelBooking() {
     int roomNumber;
 
@@ -99,7 +92,6 @@ void cancelBooking() {
     nightsBooked[roomNumber - 1] = 0;
 }
 
-// -------------------- VIEW ALL BOOKINGS --------------------
 void viewAllBookings() {
     cout << "\nCurrent Room Bookings (with Total Price):" << endl;
     for (int i = 0; i < TOTAL_ROOMS; i++) {
@@ -117,7 +109,6 @@ void viewAllBookings() {
     }
 }
 
-// -------------------- MAIN PROGRAM --------------------
 int main() {
     // Initialize all rooms as empty
     for (int i = 0; i < TOTAL_ROOMS; i++) {
